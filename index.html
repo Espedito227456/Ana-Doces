@@ -18,7 +18,7 @@
 <style>
 
 
-<!-- CSS personalizado -->
+/*CSS personalizado*/
 
 
 
@@ -198,9 +198,10 @@ footer.footer hr {
 <!-- NAVBAR -->
 <nav class="navbar navbar-dark bg-dark px-3 py-2 d-flex justify-content-between align-items-center">
     <h3 class="m-0 d-flex align-items-center">
-    <img src="https://raw.githubusercontent.com/Espedito227456/Ana-Doces/43fadfbc2beae12d37617d63a3be2522dbae9f4b/logo.jpeg" alt="Ana Doces" class="logo-navbar">
-    Ana Doces
-</h3>
+        <img src="https://raw.githubusercontent.com/Espedito227456/Ana-Doces/43fadfbc2beae12d37617d63a3be2522dbae9f4b/logo.jpeg" alt="Ana Doces" class="logo-navbar">
+        Ana Doces
+    </h3>
+
     <div id="btnCarrinhoTopo" class="bg-success px-3 py-1 rounded cursor-pointer d-flex align-items-center">
         <i class="fa-solid fa-cart-shopping me-1"></i> 
         <span id="contador">0</span>
@@ -215,72 +216,66 @@ footer.footer hr {
         <!-- PRODUTOS -->
         <div class="col-md-8" id="produtosContainer">
             <div class="row g-3">
-                <!-- Exemplo de produto -->
+
+                <!-- produto 1 -->
                 <div class="col-12 col-sm-6 col-lg-4">
-                    
-                    <div class="row g-3">
-    <!-- produto 1 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card produto-card text-center p-3" 
-             data-nome="Ninho" data-preco="12.50" data-descricao="Bolo de pote delicioso com creme Ninho">
-            <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho"></i>
-            <h5 class="produto-nome">Ninho</h5>
-            <p class="produto-preco">R$ 12.50</p>
-            <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
-        </div>
-    </div>
+                    <div class="card produto-card text-center p-3" data-nome="Ninho" data-preco="12.50" data-descricao="Bolo de pote delicioso com creme Ninho">
+                        <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho"></i>
+                        <h5 class="produto-nome">Ninho</h5>
+                        <p class="produto-preco">R$ 12.50</p>
+                        <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                    </div>
+                </div>
 
-    <!-- produto 2 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card produto-card text-center p-3" 
-             data-nome="Ninho Brigadeiro" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e brigadeiro">
-            <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-brigadeiro"></i>
-            <h5 class="produto-nome">Brigadeiro</h5>
-            <p class="produto-preco">R$ 12.50</p>
-            <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
-        </div>
-    </div>
+                <!-- produto 2 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card produto-card text-center p-3" data-nome="Brigadeiro" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e brigadeiro">
+                        <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-brigadeiro"></i>
+                        <h5 class="produto-nome">Brigadeiro</h5>
+                        <p class="produto-preco">R$ 12.50</p>
+                        <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                    </div>
+                </div>
 
-    <!-- produto 3 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card produto-card text-center p-3" 
-             data-nome="Ninho Brigadeiro Morango" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e brigadeiro">
-            <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho-brigadeiro"></i>
-            <h5 class="produto-nome">Ninho com Brigadeiro</h5>
-            <p class="produto-preco">R$ 12.50</p>
-            <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
-        </div>
-    </div>
+                <!-- produto 3 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card produto-card text-center p-3" data-nome="Ninho com Brigadeiro" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e brigadeiro">
+                        <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho-brigadeiro"></i>
+                        <h5 class="produto-nome">Ninho com Brigadeiro</h5>
+                        <p class="produto-preco">R$ 12.50</p>
+                        <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                    </div>
+                </div>
 
-    <!-- produto 4 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card produto-card text-center p-3" 
-             data-nome="Ninho Morango" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e morango">
-            <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho-morango"></i>
-            <h5 class="produto-nome">Ninho com Morango</h5>
-            <p class="produto-preco">R$ 12.50</p>
-            <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
-        </div>
-    </div>
+                <!-- produto 4 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card produto-card text-center p-3" data-nome="Ninho Morango" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e morango">
+                        <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho-morango"></i>
+                        <h5 class="produto-nome">Ninho com Morango</h5>
+                        <p class="produto-preco">R$ 12.50</p>
+                        <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                    </div>
+                </div>
 
-    <!-- produto 5 -->
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card produto-card text-center p-3" 
-             data-nome="Ninho Abacaxi" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e abacaxi">
-            <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho-abacaxi"></i>
-            <h5 class="produto-nome">Ninho com Abacaxi</h5>
-            <p class="produto-preco">R$ 12.50</p>
-            <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                <!-- produto 5 -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card produto-card text-center p-3" data-nome="Ninho Abacaxi" data-preco="12.50" data-descricao="Bolo de pote com creme Ninho e abacaxi">
+                        <i class="fa-solid fa-cake fa-3x abrir-modal mb-2 cursor-pointer text-ninho-abacaxi"></i>
+                        <h5 class="produto-nome">Ninho com Abacaxi</h5>
+                        <p class="produto-preco">R$ 12.50</p>
+                        <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-</div>
 
         <!-- CARRINHO -->
         <div class="col-md-4 bg-dark text-light p-3 rounded" id="areaCarrinho">
             <h5>Seu Pedido</h5>
             <div id="listaCarrinho">Carrinho vazio</div>
             <h6 class="mt-3">Total: R$ <span id="total">0.00</span></h6>
-            <input id="nomeCliente" class="form-control mt-2" placeholder="Seu nome"      autocomplete="off">
+            <input id="nomeCliente" class="form-control mt-2" placeholder="Seu nome" autocomplete="off">
             <button id="btnFinalizar" class="btn btn-danger w-100 mt-2">Finalizar Pedido</button>
             <hr>
             <h5>Histórico</h5>
@@ -300,40 +295,38 @@ footer.footer hr {
       </div>
       <div class="modal-body" id="modalDescricao"></div>
       <div class="modal-footer">
-        <button class="btn btn-success" id="btnAdicionarModal"><i class="fa-solid fa-plus"></i> Adicionar</button>
+        <button class="btn btn-success" id="btnAdicionarModal">
+            <i class="fa-solid fa-plus"></i> Adicionar
+        </button>
         <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
 </div>
 
-
-
 <!-- FOOTER -->
 <footer class="footer pt-4 pb-2 mt-4">
     <div class="container">
         <div class="row text-center text-md-start">
-            
-            <!-- Sobre -->
+
             <div class="col-md-4 mb-3">
                 <h5>Ana Doces</h5>
                 <p>Deliciosos bolos de pote feitos com amor. 🍰</p>
             </div>
 
-            <!-- Contato -->
             <div class="col-md-4 mb-3">
                 <h5>Contato</h5>
                 <p><i class="fa-solid fa-phone me-2"></i> (11) 95950-8227</p>
                 <p><i class="fa-solid fa-envelope me-2"></i> contato@anadoces.com</p>
             </div>
 
-            <!-- Redes Sociais -->
             <div class="col-md-4 mb-3">
                 <h5>Siga-nos</h5>
                 <a href="#"><i class="fa-brands fa-facebook fa-lg me-2"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram fa-lg me-2"></i></a>
                 <a href="#"><i class="fa-brands fa-whatsapp fa-lg me-2"></i></a>
             </div>
+
         </div>
 
         <hr>
@@ -353,220 +346,245 @@ footer.footer hr {
 
 
 
+<script type="module">
 
-<script>
-    // ===== CONFIGURAÇÕES =====
-const LIMITE = 18;
-let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, increment, onSnapshot }
+from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 
-let contador = document.getElementById("contador");
-let restanteSpan = document.getElementById("restante");
-let listaCarrinho = document.getElementById("listaCarrinho");
-let totalSpan = document.getElementById("total");
-let inputNomeCliente = document.getElementById("nomeCliente");
-
-let modal = new bootstrap.Modal(document.getElementById("modalProduto"));
-let modalTitulo = document.getElementById("modalTitulo");
-let modalDescricao = document.getElementById("modalDescricao");
-let btnAdicionarModal = document.getElementById("btnAdicionarModal");
-
-// ===== DISPONIBILIDADE DIRETA =====
-const disponibilidadeProdutos = {
-    "ninho": true,
-    "ninho brigadeiro": true,
-    "ninho brigadeiro morango": true,
-    "ninho morango": true,
-    "ninho abacaxi": true
+// ===== CONFIGURAÇÃO FIREBASE =====
+const firebaseConfig = {
+  apiKey: "AIzaSyB2ncY9pje6k2vjPlpTa1qL326h7NZGIJk",
+  authDomain: "ana-doces-app.firebaseapp.com",
+  projectId: "ana-doces-app",
+  storageBucket: "ana-doces-app.firebasestorage.app",
+  messagingSenderId: "563319843881",
+  appId: "1:563319843881:web:9a4b884fef9f4a6f9e4038",
+  measurementId: "G-DF09ZF8KH3"
 };
 
-// Atualiza os cards e botões com base na disponibilidade
-function atualizarDisponibilidadeJS() {
-    document.querySelectorAll('.produto-card').forEach(card => {
-        const nome = card.dataset.nome.trim().toLowerCase();
-        const disponivel = disponibilidadeProdutos[nome] ?? true;
-        card.dataset.disponivel = disponivel ? "true" : "false";
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-        // Ajusta botão "Adicionar"
-        const btn = card.querySelector(".btnAdicionar");
-        if(!disponivel) {
-            btn.disabled = true;
-            btn.style.opacity = "0.5";
-        } else {
-            btn.disabled = false;
-            btn.style.opacity = "1";
-        }
-    });
+// ===== VARIÁVEIS =====
+const LIMITE = 18;
+const contadorRef = doc(db, "global", "contador");
+
+// ===== CARRINHO =====
+let carrinho = [];            // sempre inicia vazio
+localStorage.removeItem("carrinho"); // garante que nenhum produto antigo permaneça
+
+// Elementos do DOM
+const contador = document.getElementById("contador");
+const restanteSpan = document.getElementById("restante");
+const listaCarrinho = document.getElementById("listaCarrinho");
+const totalSpan = document.getElementById("total");
+const inputNomeCliente = document.getElementById("nomeCliente");
+
+const modal = new bootstrap.Modal(document.getElementById("modalProduto"));
+const modalTitulo = document.getElementById("modalTitulo");
+const modalDescricao = document.getElementById("modalDescricao");
+const btnAdicionarModal = document.getElementById("btnAdicionarModal");
+
+// ===== CONTADOR GLOBAL =====
+let totalGlobal = 0;
+
+getDoc(contadorRef).then(snap => {
+  if(!snap.exists()){
+    setDoc(contadorRef, { total: 0 });
+  }
+});
+
+onSnapshot(contadorRef, snap => {
+  if(!snap.exists()){
+    totalGlobal = 0;
+    contador.innerText = 0;
+    restanteSpan.innerText = `(${LIMITE} disponíveis)`;
+    return;
+  }
+
+  totalGlobal = snap.data().total || 0;
+  contador.innerText = totalGlobal;
+  restanteSpan.innerText = `(${LIMITE - totalGlobal} disponíveis)`;
+
+  // Atualiza disponibilidade dos cards
+  document.querySelectorAll(".produto-card").forEach(card => {
+    card.dataset.disponivel = totalGlobal >= LIMITE ? "false" : "true";
+  });
+});
+
+// ===== FUNÇÕES DO CONTADOR GLOBAL =====
+async function addGlobal(qtd = 1) {
+  await updateDoc(contadorRef, { total: increment(qtd) });
 }
 
-// ===== SALVAR & ATUALIZAR CARRINHO =====
-function salvar() {
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-}
-
-function atualizar() {
-    let totalItens = carrinho.reduce((t,i)=>t+i.qtd,0);
-    contador.innerText = totalItens;
-
-    let restante = LIMITE - totalItens;
-    restanteSpan.innerText = `(${restante} disponíveis)`;
-
-    document.querySelectorAll(".btnAdicionar").forEach(btn=>{
-        const card = btn.closest('.produto-card');
-        btn.disabled = totalItens >= LIMITE || card.dataset.disponivel === "false";
-    });
-
-    if(carrinho.length === 0){
-        listaCarrinho.innerHTML = "Carrinho vazio";
-        totalSpan.innerText = "0.00";
-        return;
-    }
-
-    listaCarrinho.innerHTML = "";
-    let total = 0;
-    carrinho.forEach((item,i)=>{
-        const sub = item.preco * item.qtd;
-        total += sub;
-        listaCarrinho.innerHTML += `
-            ${item.nome} (${item.qtd}) - R$ ${sub.toFixed(2)}
-            <button onclick="mais(${i})">➕</button>
-            <button onclick="menos(${i})">➖</button>
-            <button onclick="remover(${i})">🗑️</button><br>`;
-    });
-    totalSpan.innerText = total.toFixed(2);
+async function removeGlobal(qtd = 1) {
+  await updateDoc(contadorRef, { total: increment(-qtd) });
 }
 
 // ===== FUNÇÕES DO CARRINHO =====
-function mais(i){
-    if(carrinho.reduce((t,i)=>t+i.qtd,0) >= LIMITE){
-        Swal.fire({icon:"warning", title:`Limite de ${LIMITE} itens atingido`});
+function salvar() {
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+
+function atualizar() {
+  // filtra itens inválidos
+  carrinho = carrinho.filter(item => item && item.qtd > 0 && item.nome);
+
+  if(carrinho.length === 0) {
+    listaCarrinho.innerHTML = "Carrinho vazio";
+    totalSpan.innerText = "0.00";
+    salvar();
+    return;
+  }
+
+  let total = 0;
+  listaCarrinho.innerHTML = "";
+
+  carrinho.forEach((item, i) => {
+    const sub = item.preco * item.qtd;
+    total += sub;
+
+    listaCarrinho.innerHTML += `
+      ${item.nome} (${item.qtd}) - R$ ${sub.toFixed(2)}
+      <button onclick="mais(${i})">➕</button>
+      <button onclick="menos(${i})">➖</button>
+      <button onclick="remover(${i})">🗑️</button><br>`;
+  });
+
+  totalSpan.innerText = total.toFixed(2);
+  salvar();
+}
+
+// ===== MANIPULAÇÃO GLOBAL DO CARRINHO =====
+window.mais = async function(i){
+  if(totalGlobal >= LIMITE){
+    Swal.fire("Estoque esgotado 😔");
+    return;
+  }
+  carrinho[i].qtd++;
+  await addGlobal(1);
+  atualizar();
+}
+
+window.menos = async function(i){
+  carrinho[i].qtd--;
+  await removeGlobal(1);
+  if(carrinho[i].qtd <= 0) carrinho.splice(i,1);
+  atualizar();
+}
+
+window.remover = async function(i){
+  await removeGlobal(carrinho[i].qtd);
+  carrinho.splice(i,1);
+  atualizar();
+}
+
+// ===== ADICIONAR PELOS CARDS =====
+function inicializarCards() {
+  // remove listeners antigos
+  document.querySelectorAll(".btnAdicionar").forEach(btn => btn.replaceWith(btn.cloneNode(true)));
+  document.querySelectorAll(".abrir-modal").forEach(icon => icon.replaceWith(icon.cloneNode(true)));
+
+  document.querySelectorAll(".btnAdicionar").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const card = btn.closest(".produto-card");
+      if(totalGlobal >= LIMITE){
+        Swal.fire("Estoque esgotado 😔");
         return;
-    }
-    carrinho[i].qtd++;
-    salvar(); atualizar();
-}
+      }
 
-function menos(i){
-    carrinho[i].qtd--;
-    if(carrinho[i].qtd <= 0) carrinho.splice(i,1);
-    salvar(); atualizar();
-}
+      const nome = card.dataset.nome;
+      const preco = parseFloat(card.dataset.preco);
+      const item = carrinho.find(p => p.nome === nome);
+      if(item) item.qtd++;
+      else carrinho.push({ nome, preco, qtd: 1 });
 
-function remover(i){
-    Swal.fire({title:"Remover item?", icon:"warning", showCancelButton:true})
-        .then(r => { if(r.isConfirmed){ carrinho.splice(i,1); salvar(); atualizar(); } });
-}
+      await addGlobal(1);
+      atualizar();
 
-// ===== CONFIGURA EVENTOS =====
-function configurarEventos() {
-    // Botão direto
-    document.querySelectorAll(".btnAdicionar").forEach(btn=>{
-        btn.addEventListener("click", e=>{
-            e.stopPropagation();
-            const card = btn.closest(".produto-card");
-            if(card.dataset.disponivel === "false"){
-                Swal.fire({icon:"info", title:"Produto indisponível 😔"});
-                return;
-            }
-
-            const nome = card.dataset.nome;
-            const preco = parseFloat(card.dataset.preco);
-
-            if(carrinho.reduce((t,i)=>t+i.qtd,0) >= LIMITE){
-                Swal.fire({icon:"warning", title:`Limite de ${LIMITE} itens atingido`});
-                return;
-            }
-
-            const itemExistente = carrinho.find(p => p.nome === nome);
-            if(itemExistente) itemExistente.qtd++; 
-            else carrinho.push({nome, preco, qtd:1});
-
-            salvar(); atualizar();
-            Swal.fire({icon:"success", title:"Adicionado!", timer:800, showConfirmButton:false});
-        });
+      Swal.fire({icon:"success", title:"Adicionado!", timer:700, showConfirmButton:false});
     });
+  });
 
-    // Modal
-    document.querySelectorAll(".abrir-modal").forEach(icon=>{
-        icon.addEventListener("click", e=>{
-            e.stopPropagation();
-            const card = icon.closest(".produto-card");
-            if(card.dataset.disponivel === "false"){
-                Swal.fire({icon:"info", title:"Produto indisponível 😔"});
-                return;
-            }
+  document.querySelectorAll(".abrir-modal").forEach(icon => {
+    icon.addEventListener("click", () => {
+      const card = icon.closest(".produto-card");
+      modalTitulo.innerText = card.dataset.nome;
+      modalDescricao.innerText = card.dataset.descricao;
 
-            modalTitulo.innerText = card.dataset.nome;
-            modalDescricao.innerText = card.dataset.descricao;
+      btnAdicionarModal.onclick = async () => {
+        if(totalGlobal >= LIMITE){
+          Swal.fire("Estoque esgotado 😔");
+          return;
+        }
 
-            btnAdicionarModal.onclick = ()=>{
-                if(carrinho.reduce((t,i)=>t+i.qtd,0) >= LIMITE){
-                    Swal.fire({icon:"warning", title:`Limite de ${LIMITE} itens atingido`});
-                    return;
-                }
-                const itemExistente = carrinho.find(p => p.nome === card.dataset.nome);
-                if(itemExistente) itemExistente.qtd++;
-                else carrinho.push({nome: card.dataset.nome, preco: parseFloat(card.dataset.preco), qtd:1});
+        const nome = card.dataset.nome;
+        const preco = parseFloat(card.dataset.preco);
+        const item = carrinho.find(p => p.nome === nome);
+        if(item) item.qtd++;
+        else carrinho.push({ nome, preco, qtd: 1 });
 
-                salvar(); atualizar();
-                Swal.fire({icon:"success", title:"Adicionado!", timer:800, showConfirmButton:false});
-                modal.hide();
-            };
-            setTimeout(()=>{ modal.show(); }, 200);
-        });
+        await addGlobal(1);
+        atualizar();
+        modal.hide();
+
+        Swal.fire({icon:"success", title:"Adicionado!", timer:700, showConfirmButton:false});
+      }
+
+      modal.show();
     });
+  });
 }
 
-// ===== FINALIZA PEDIDO WHATSAPP =====
-document.getElementById("btnFinalizar").addEventListener("click", ()=>{
-    if(carrinho.length === 0){ Swal.fire("Carrinho vazio!"); return; }
-    const nomeCliente = inputNomeCliente.value.trim();
-    if(nomeCliente === ""){ Swal.fire({icon:"warning", title:"Digite seu nome antes de finalizar"}); return; }
+// ===== FINALIZAR PEDIDO =====
+document.getElementById("btnFinalizar").addEventListener("click", async () => {
+  if(carrinho.length === 0){
+    Swal.fire("Carrinho vazio");
+    return;
+  }
 
-    let mensagem = `Novo pedido: Ana Doces\n\nCliente: ${nomeCliente}\n\n`;
-    let total = 0;
-    carrinho.forEach(item=>{
-        mensagem += `- ${item.nome} x${item.qtd} - R$ ${(item.preco*item.qtd).toFixed(2)}\n`;
-        total += item.preco*item.qtd;
-    });
-    mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
-    window.open(`https://wa.me/5511959508227?text=${encodeURIComponent(mensagem)}`, "_blank");
+  const nomeCliente = inputNomeCliente.value.trim();
+  if(nomeCliente === ""){
+    Swal.fire("Digite seu nome");
+    return;
+  }
 
-    const historico = JSON.parse(localStorage.getItem("historico")) || [];
-    historico.push({data:new Date().toLocaleString(), nome:nomeCliente, itens:carrinho, total: total.toFixed(2)});
-    localStorage.setItem("historico", JSON.stringify(historico));
+  let msg = `Novo pedido: Ana Doces\n\nCliente: ${nomeCliente}\n\n`;
+  let total = 0;
 
-    carrinho = []; inputNomeCliente.value = "";
-    salvar(); atualizar(); mostrarHistorico();
-});
+  carrinho.forEach(item => {
+    msg += `- ${item.nome} x${item.qtd} - R$ ${(item.preco * item.qtd).toFixed(2)}\n`;
+    total += item.preco * item.qtd;
+  });
+  msg += `\nTotal: R$ ${total.toFixed(2)}`;
 
-// ===== HISTÓRICO =====
-function mostrarHistorico(){
-    const div = document.getElementById("historicoPedidos");
-    const historico = JSON.parse(localStorage.getItem("historico")) || [];
-    if(historico.length === 0){ div.innerHTML = "Nenhum pedido ainda"; return; }
-    div.innerHTML = "";
-    historico.forEach(p=>{
-        div.innerHTML += `<div style="border:1px solid gray;padding:10px;margin-top:10px">🕒 ${p.data}<br>👤 ${p.nome}<br>💰 Total: R$ ${p.total}</div>`;
-    });
-}
+  window.open(`https://wa.me/5511959508227?text=${encodeURIComponent(msg)}`);
 
-// ===== SCROLL CARRINHO =====
-document.getElementById("btnCarrinhoTopo").addEventListener("click", ()=>{
-    document.getElementById("areaCarrinho").scrollIntoView({behavior:"smooth", block:"start"});
-});
-
-// ===== ESCONDER TECLADO =====
-inputNomeCliente.addEventListener("keydown", function(e){
-    if(e.key === "Enter"){ e.preventDefault(); this.blur(); }
+  // zera carrinho
+  carrinho = [];
+  localStorage.removeItem("carrinho");
+  inputNomeCliente.value = "";
+  atualizar();
+  Swal.fire({icon:"success", title:"Pedido finalizado!", timer:1000, showConfirmButton:false});
 });
 
 // ===== INICIALIZAÇÃO =====
-atualizarDisponibilidadeJS();
-configurarEventos();
-mostrarHistorico();
-atualizar();
+(async function inicializar() {
+  const snap = await getDoc(contadorRef);
+  totalGlobal = snap.exists() ? snap.data().total || 0 : 0;
 
-    
+  atualizar();      // atualiza interface do contador e carrinho
+  inicializarCards(); // inicializa listeners dos cards e modais
+})();
+
 </script>
+
+
+
+
+
+
+
 </body>
 </html>
