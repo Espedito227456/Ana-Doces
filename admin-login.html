@@ -1,1 +1,103 @@
-aqui nascera o login para o painel adm protejido
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Admin - Ana Doces</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container-login {
+    max-width: 400px;
+    margin: 100px auto;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-success {
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container-login">
+    <h3>🔐 Painel Admin</h3>
+
+    <input id="email" type="email" class="form-control mb-3" placeholder="Digite seu email">
+
+    <input id="senha" type="password" class="form-control mb-3" placeholder="Digite sua senha">
+
+    <button id="btnLogin" class="btn btn-success w-100">Entrar</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+
+// 🔥 SUA CONFIG FIREBASE
+const firebaseConfig = {
+    apiKey: "AIzaSyB2ncY9pje6k2vjPlpTa1qL326h7NZGIJk",
+    authDomain: "ana-doces-app.firebaseapp.com",
+    projectId: "ana-doces-app",
+    storageBucket: "ana-doces-app.firebasestorage.app",
+    messagingSenderId: "563319843881",
+    appId: "1:563319843881:web:9a4b884fef9f4a6f9e4038",
+    measurementId: "G-DF09ZF8KH3"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// 🔐 LOGIN
+document.getElementById("btnLogin").addEventListener("click", async () => {
+
+    const email = document.getElementById("email").value.trim();
+    const senha = document.getElementById("senha").value.trim();
+
+    if (!email || !senha) {
+        return Swal.fire("Atenção", "Preencha todos os campos!", "warning");
+    }
+
+    try {
+        await signInWithEmailAndPassword(auth, email, senha);
+
+        // salva sessão
+        localStorage.setItem("adminLogado", "true");
+
+        Swal.fire({
+            icon: "success",
+            title: "Login realizado!",
+            timer: 1000,
+            showConfirmButton: false
+        }).then(() => {
+            window.location.href = "admin.html";
+        });
+
+    } catch (e) {
+        Swal.fire("Erro", "Email ou senha inválidos!", "error");
+    }
+
+});
+</script>
+
+</body>
+</html>
