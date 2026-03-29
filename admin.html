@@ -15,6 +15,7 @@ body {
 }
 
 .card {
+    color: white;
     background: #1a1a1a;
     border-radius: 10px;
     padding: 15px;
@@ -30,12 +31,7 @@ body {
 
 <body class="p-3">
 
-<!-- 🔐 PROTEÇÃO -->
-<script>
-if (localStorage.getItem("adminLogado") !== "true") {
-    window.location.href = "admin-login.html";
-}
-</script>
+
 
 <div class="topo mb-3">
     <h3>📊 Painel Admin</h3>
@@ -53,8 +49,9 @@ if (localStorage.getItem("adminLogado") !== "true") {
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getFirestore, collection, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
 
-// 🔥 SUA CONFIG FIREBASE
+// 🔥 CONFIG
 const firebaseConfig = {
     apiKey: "AIzaSyB2ncY9pje6k2vjPlpTa1qL326h7NZGIJk",
     authDomain: "ana-doces-app.firebaseapp.com",
@@ -67,32 +64,45 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
-const pedidosRef = collection(db, "pedidos");
 const pedidosDiv = document.getElementById("pedidos");
 
-// 🔥 TEMPO REAL
-const q = query(pedidosRef, orderBy("criadoEm", "desc"));
+// 🔐 ESPERA LOGIN REAL
+onAuthStateChanged(auth, (user) => {
 
-onSnapshot(q, (snapshot) => {
-
-    pedidosDiv.innerHTML = "";
-
-    if (snapshot.empty) {
-        pedidosDiv.innerHTML = "Nenhum pedido ainda...";
+    if (!user) {
+        window.location.href = "admin-login.html";
         return;
     }
 
-    snapshot.forEach(doc => {
-        const p = doc.data();
+    console.log("Logado:", user.uid);
 
-        pedidosDiv.innerHTML += `
-            <div class="card mb-2">
-                <strong>👤 ${p.nome}</strong><br>
-                🧾 ${p.itens.join("<br>")}<br>
-                💰 <b>R$ ${p.total}</b>
-            </div>
-        `;
+    const pedidosRef = collection(db, "pedidos");
+    const q = query(pedidosRef, orderBy("criadoEm", "desc"));
+
+    // 🔥 TEMPO REAL
+    onSnapshot(q, (snapshot) => {
+
+        pedidosDiv.innerHTML = "";
+
+        if (snapshot.empty) {
+            pedidosDiv.innerHTML = "Nenhum pedido ainda...";
+            return;
+        }
+
+        snapshot.forEach(doc => {
+            const p = doc.data();
+
+            pedidosDiv.innerHTML += `
+                <div class="card mb-2">
+                    <strong>👤 ${p.nome}</strong><br>
+                    🧾 ${p.itens.join("<br>")}<br>
+                    💰 <b>R$ ${p.total}</b>
+                </div>
+            `;
+        });
+
     });
 
 });
