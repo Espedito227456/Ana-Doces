@@ -9,12 +9,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        body { background-color: #fff0f5; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .logo-navbar { height: 40px; margin-right: 10px; border-radius: 50%; }
-        .navbar.bg-dark { background-color: #ffccd5 !important; color: #333 !important; }
-        .navbar.bg-dark h3, .navbar.bg-dark span, .navbar.bg-dark i { color: #333 !important; }
-        #contador, #restante { color: white !important; font-weight: bold; }
-        #btnCarrinhoTopo i { color: #fff !important; }
+        body{
+            background-color: #fff0f5;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .logo-navbar{
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        
+        .navbar.bg-dark{
+            background-color: #ffccd5 !important;
+            color: #333 !important;
+        }
+        
+        .navbar.bg-dark h3, .navbar.bg-dark span, .navbar.bg-dark i{
+            color: #333 !important;
+        }
+        
+        #contador, #restante{
+            color: white !important;
+            font-weight: bold;
+        }
+        
+        #btnCarrinhoTopo i{
+            color: #fff !important;
+        }
 
         .card.produto-card {
             border-radius: 12px;
@@ -34,17 +57,29 @@
         .card.produto-card:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
 
         .text-ninho { color: #fff3c4; text-shadow: 0 0 4px #d9c48c; }
+     
         .text-brigadeiro { color: #6b3a12; text-shadow: 0 0 4px #a97c5e; }
+     
         .text-ninho-brigadeiro { color: #d9a441; text-shadow: 0 0 4px #6b3a12; }
+      
         .text-ninho-morango { color: #ff6b8a; text-shadow: 0 0 4px #ffb6c1; }
+       
         .text-ninho-abacaxi { color: #ffc300; text-shadow: 0 0 4px #fff3c4; }
 
         .produto-nome { color: black; font-weight: bold; }
+       
         .produto-preco { color: white; font-weight: bold; }
+        
         .produto-card[data-disponivel="false"] { opacity: 0.5; pointer-events: none; }
+        
         .produto-card[data-disponivel="false"] .btnAdicionar { display: none; }
 
-        #areaCarrinho { position: sticky; top: 20px; }
+        #areaCarrinho {
+            position: sticky; 
+            top: 20px;
+            margin-top: 15px;
+        }
+        
         #historicoPedidos div {
             border: 1px solid gray;
             padding: 8px;
@@ -56,9 +91,23 @@
         }
 
         footer.footer { background-color: #ffccd5 !important; color: #333 !important; border-radius: 5px; }
+        
         footer.footer a { color: #333; transition: color 0.2s; }
-        footer.footer a:hover { color: #ff6b8a; text-decoration: none; }
-        footer.footer hr { border-color: #ffe6f0; margin: 15px 0; }
+        
+    footer.footer a:hover{
+        color: #ff6b8a;
+        text-decoration: none;
+    }
+        
+    footer.footer hr{
+        border-color: #ffe6f0;
+        margin: 15px 0;
+    }
+        
+    .btn-outline-light{
+        font-weight: bold;
+    }
+           
     </style>
 </head>
 
@@ -72,7 +121,7 @@
     <div id="btnCarrinhoTopo" class="bg-success px-3 py-1 rounded d-flex align-items-center">
         <i class="fa-solid fa-cart-shopping me-1"></i> 
         <span id="contador">0</span>
-        <span id="restante" class="ms-2">(18 disponíveis)</span>
+        <!--<span id="restante" class="ms-2">(18 disponíveis)</span>-->
     </div>
 </nav>
 
@@ -85,6 +134,7 @@
                         <i class="fa-solid fa-cake fa-3x mb-2 text-ninho"></i>
                         <h5 class="produto-nome">Ninho</h5>
                         <p class="produto-preco">R$ 12.50</p>
+                        <p class="produto-estoque text-muted small">Disponível: <span>0</span></p>
                         <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
                     </div>
                 </div>
@@ -93,6 +143,7 @@
                         <i class="fa-solid fa-cake fa-3x mb-2 text-brigadeiro"></i>
                         <h5 class="produto-nome">Brigadeiro</h5>
                         <p class="produto-preco">R$ 12.50</p>
+                        <p class="produto-estoque text-muted small">Disponível: <span>0</span></p>
                         <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
                     </div>
                 </div>
@@ -101,6 +152,7 @@
                         <i class="fa-solid fa-cake fa-3x mb-2 text-ninho-brigadeiro"></i>
                         <h5 class="produto-nome">Ninho + Brigadeiro</h5>
                         <p class="produto-preco">R$ 12.50</p>
+                        <p class="produto-estoque text-muted small">Disponível: <span>0</span></p>
                         <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
                     </div>
                 </div>
@@ -109,6 +161,7 @@
                         <i class="fa-solid fa-cake fa-3x mb-2 text-ninho-morango"></i>
                         <h5 class="produto-nome">Ninho c/ Morango</h5>
                         <p class="produto-preco">R$ 12.50</p>
+                        <p class="produto-estoque text-muted small">Disponível: <span>0</span></p>
                         <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
                     </div>
                 </div>
@@ -117,6 +170,7 @@
                         <i class="fa-solid fa-cake fa-3x mb-2 text-ninho-abacaxi"></i>
                         <h5 class="produto-nome">Ninho c/ Abacaxi</h5>
                         <p class="produto-preco">R$ 12.50</p>
+                        <p class="produto-estoque text-muted small">Disponível: <span>0</span></p>
                         <button class="btn btn-success btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
                     </div>
                 </div>
@@ -169,8 +223,9 @@
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-import { getFirestore, doc, getDoc, updateDoc, increment, onSnapshot } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getFirestore, doc, updateDoc, deleteField, onSnapshot, increment } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 
+/// CONEXÃO COM FIREBASE ///
 const firebaseConfig = {
     apiKey: "AIzaSyB2ncY9pje6k2vjPlpTa1qL326h7NZGIJk",
     authDomain: "ana-doces-app.firebaseapp.com",
@@ -183,12 +238,34 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const LIMITE = 18;
+
+// REFERÊNCIA DO ESTOQUE (novo foco)
+const estoqueRef = doc(db, "global", "estoque");
+let estoque = {};
+
+// SE QUISER REMOVER O CAMPO 'disponivel' DO CONTADOR ANTIGO
 const contadorRef = doc(db, "global", "contador");
 
-let carrinho = []; 
-let totalNoBanco = 0;
+async function limparContador() {
+    await updateDoc(contadorRef, { disponivel: deleteField() });
+    console.log("Campo 'disponivel' do contador removido!");
+}
 
+// chama a função
+limparContador();
+
+// Inicialização do carrinho
+let carrinho = [];
+
+const produtos = [
+{name:"Ninho", preco:12.50},
+{name:"Brigadeiro", preco:12.50},
+{name:"Ninho + Brigadeiro", preco:12.50},
+{name:"Ninho c/ Morango", preco:12.50},
+{name:"Ninho c/ Abacaxi", preco:12.50}
+];
+
+const domProdutos = document.getElementById("produtosContainer");
 const domContador = document.getElementById("contador");
 const domRestante = document.getElementById("restante");
 const domListaCarrinho = document.getElementById("listaCarrinho");
@@ -201,25 +278,65 @@ inputNome.addEventListener("input", function() {
     this.value = this.value.replace(/[0-9]/g, "");
 });
 
-onSnapshot(contadorRef, (snap) => {
+/*onSnapshot(contadorRef, (snap) => {
     if (snap.exists()) {
         totalNoBanco = snap.data().total || 0;
         renderizar();
     }
+});*/
+
+//ESCUTAR O ESTOQUE///
+onSnapshot(estoqueRef, (snap) => {
+    if (snap.exists()) {
+        estoque = snap.data(); // pega os dados do estoque
+        renderizar(); // atualiza os cards
+    } else {
+        console.log("Documento de estoque não existe!");
+    }
 });
+
+
 
 function getQtdCarrinho() { return carrinho.reduce((acc, item) => acc + item.qtd, 0); }
 
+
+document.getElementById("btnCarrinhoTopo").addEventListener("click", () => {
+    const areaCarrinho = document.getElementById("areaCarrinho");
+    areaCarrinho.scrollIntoView({ behavior: "smooth" });
+});
+
+
+
+
+
+
+
 function renderizar() {
     const noCarrinho = getQtdCarrinho();
-    const disponivelAgora = Math.max(0, LIMITE - totalNoBanco - noCarrinho);
     domContador.innerText = noCarrinho;
-    domRestante.innerText = `(${disponivelAgora} disponíveis)`;
 
     document.querySelectorAll(".produto-card").forEach(card => {
-        card.dataset.disponivel = (totalNoBanco + noCarrinho < LIMITE) ? "true" : "false";
+        const nome = card.dataset.nome;
+        const estoqueReal = estoque[nome] || 0;
+
+// quanto já tem no carrinho desse item
+const noCarrinho = carrinho.find(i => i.nome === nome)?.qtd || 0;
+
+// estoque VISUAL (o que aparece pro cliente)
+const estoqueVisual = estoqueReal - noCarrinho;
+        const spanEstoque = card.querySelector(".produto-estoque span");
+        if (spanEstoque) spanEstoque.innerText = estoqueVisual;
+
+        // Desativa cartão se estoque zerar
+        if (estoqueVisual <= 0) {
+            card.style.opacity = 0.5;
+        } else {
+            card.style.opacity = 1;
+            card.style.pointerEvents = "auto";
+        }
     });
 
+    // Atualiza o carrinho
     if (carrinho.length === 0) {
         domListaCarrinho.innerHTML = "Carrinho vazio";
         domTotal.innerText = "0.00";
@@ -232,8 +349,8 @@ function renderizar() {
             html += `<div class="d-flex justify-content-between align-items-center mb-1">
                         <span>${item.nome} (${item.qtd})</span>
                         <div>
-                            <button class="btn btn-sm btn-outline-light py-0 px-1" onclick="alterarQtd(${index}, 1)">+</button>
-                            <button class="btn btn-sm btn-outline-light py-0 px-1" onclick="alterarQtd(${index}, -1)">-</button>
+                            <button class="btn btn-outline-light px-3 me-1" onclick="alterarQtd(${index}, 1)">+</button>
+<button class="btn btn-outline-light px-3" onclick="alterarQtd(${index}, -1)">-</button>
                         </div>
                      </div>`;
         });
@@ -241,20 +358,38 @@ function renderizar() {
         domTotal.innerText = soma.toFixed(2);
     }
 }
-
+/// Função para alterar quantidade e sincronizar com Firebase
 window.alterarQtd = (index, delta) => {
     const item = carrinho[index];
-    if (delta > 0 && (totalNoBanco + getQtdCarrinho() >= LIMITE)) return;
+    const estoqueAtual = estoque[item.nome] || 0;
+
+    if (delta > 0 && item.qtd >= estoqueAtual) return;
+
     item.qtd += delta;
-    if (item.qtd <= 0) carrinho.splice(index, 1);
+
+    if (item.qtd <= 0) {
+        carrinho.splice(index, 1);
+    }
+
     renderizar();
 };
 
 window.adicionarAoCarrinho = (nome, preco) => {
-    if (totalNoBanco + getQtdCarrinho() >= LIMITE) return Swal.fire("Esgotado!");
+    if (estoque[nome] === undefined) {
+        return Swal.fire("Carregando estoque...");
+    }
+
+    const itemEstoque = estoque[nome];
+    const itemCarrinho = carrinho.find(p => p.nome === nome)?.qtd || 0;
+
+    if (itemCarrinho >= itemEstoque) {
+        return Swal.fire("Esse sabor esgotou!");
+    }
+
     const item = carrinho.find(p => p.nome === nome);
     if (item) item.qtd++;
     else carrinho.push({ nome, preco, qtd: 1 });
+
     renderizar();
 
     Swal.fire({
@@ -262,8 +397,7 @@ window.adicionarAoCarrinho = (nome, preco) => {
         title: "Adicionado!",
         text: `${nome} foi para o carrinho.`,
         showConfirmButton: false,
-        timer: 1000,
-        position: 'center'
+        timer: 800
     });
 };
 
@@ -275,38 +409,63 @@ document.querySelectorAll(".btnAdicionar").forEach(btn => {
 });
 
 document.getElementById("btnFinalizar").addEventListener("click", async () => {
-    
+
+    const btn = document.getElementById("btnFinalizar");
+    btn.disabled = true;
+
     let nomeFinal = inputNome.value.replace(/[0-9]/g, "").trim();
-    
+
     if (getQtdCarrinho() === 0 || nomeFinal === "") {
+        btn.disabled = false; // 🔥 reativa aqui
         return Swal.fire("Atenção", "Informe seu nome (sem números) e escolha os produtos.", "warning");
     }
 
     try {
-        const snap = await getDoc(contadorRef);
-        const atual = snap.data().total || 0;
-        if (atual + getQtdCarrinho() > LIMITE) return Swal.fire("Estoque insuficiente!");
+        // 🔒 VALIDAÇÃO EXTRA DE ESTOQUE
+        for (let item of carrinho) {
+            if ((estoque[item.nome] || 0) < item.qtd) {
+                btn.disabled = false; // 🔥 reativa aqui também
+                return Swal.fire("Ops!", `Estoque insuficiente para ${item.nome}`, "error");
+            }
+        }
 
-        await updateDoc(contadorRef, { total: increment(getQtdCarrinho()) });
+        const updates = {};
 
+        carrinho.forEach(item => {
+            updates[item.nome] = increment(-item.qtd);
+        });
+
+        await updateDoc(estoqueRef, updates);
+
+        // HISTÓRICO
         if (domHistorico.innerText.includes("Nenhum")) domHistorico.innerHTML = "";
+
         const div = document.createElement("div");
         div.innerHTML = `<strong>${nomeFinal}</strong>: ${getQtdCarrinho()} itens - R$ ${domTotal.innerText}`;
         domHistorico.prepend(div);
 
-        let msg = `*Novo Pedido - Ana Doces*\nCliente: ${nomeFinal}\n`;
-        carrinho.forEach(i => msg += `- ${i.nome} x${i.qtd}\n`);
-        msg += `Total: R$ ${domTotal.innerText}`;
-        window.open(`https://wa.me/5511959508227?text=${encodeURIComponent(msg)}`, "_blank");
+        // WHATSAPP
+let msg = `*Novo Pedido - Ana Doces*\nCliente: ${nomeFinal}\n`;
+carrinho.forEach(i => msg += `- ${i.nome} x${i.qtd}\n`);
+msg += `Total: R$ ${domTotal.innerText}`;
 
-        carrinho = [];
-        inputNome.value = "";
-        renderizar();
-        Swal.fire("Sucesso!", "Pedido enviado!", "success");
-    } catch (e) { Swal.fire("Erro na conexão."); }
+// ALERTA + ABRE WHATS
+Swal.fire("Sucesso!", "Pedido enviado!", "success").then(() => {
+    window.open(`https://wa.me/5511959508227?text=${encodeURIComponent(msg)}`, "_blank");
+    
+    carrinho = [];
+renderizar();
+inputNome.value = "";
 });
 
-renderizar();
+    } catch (e) {
+        Swal.fire("Erro na conexão.");
+        console.error(e);
+    }finally {
+    btn.disabled = false; // 🔥 aqui resolve tudo
+}
+});
+
 </script>
 </body>
 </html>
