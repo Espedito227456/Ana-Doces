@@ -223,7 +223,7 @@
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-import { getFirestore, doc, updateDoc, deleteField, onSnapshot, increment } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+import { getFirestore, doc, updateDoc, deleteField, onSnapshot, increment, addDoc, collection, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 
 /// CONEXÃO COM FIREBASE ///
 const firebaseConfig = {
@@ -437,8 +437,16 @@ document.getElementById("btnFinalizar").addEventListener("click", async () => {
 
         await updateDoc(estoqueRef, updates);
 
-        // HISTÓRICO
-        if (domHistorico.innerText.includes("Nenhum")) domHistorico.innerHTML = "";
+
+await addDoc(collection(db, "pedidos"), {
+    nome: nomeFinal,
+    itens: carrinho.map(i => `${i.nome} x${i.qtd}`),
+    total: domTotal.innerText,
+    criadoEm: serverTimestamp()
+});
+
+// HISTÓRICO
+if (domHistorico.innerText.includes("Nenhum")) domHistorico.innerHTML = "";
 
         const div = document.createElement("div");
         div.innerHTML = `<strong>${nomeFinal}</strong>: ${getQtdCarrinho()} itens - R$ ${domTotal.innerText}`;
