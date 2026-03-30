@@ -78,18 +78,17 @@ document.getElementById("btnLogin").addEventListener("click", async () => {
     }
 
     try {
-        await signInWithEmailAndPassword(auth, email, senha);
+        // Faz login no Firebase Auth
+        const userCredential = await signInWithEmailAndPassword(auth, email, senha);
 
-        // salva sessão
-        localStorage.setItem("adminLogado", "true");
-
+        // ✅ Aqui não precisa do localStorage mais
         Swal.fire({
             icon: "success",
             title: "Login realizado!",
             timer: 1000,
             showConfirmButton: false
         }).then(() => {
-            window.location.href = "admin.html";
+            window.location.href = "admin.html"; // redireciona para o painel
         });
 
     } catch (e) {
